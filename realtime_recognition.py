@@ -3,16 +3,16 @@ from keras.models import model_from_json
 import numpy as np
 import os
 print(os.getcwd())
+from tensorflow.keras.models import model_from_json
 # from keras_preprocessing.image import load_img
 
-json_file_path = "C:/Users/jaysu/Desktop/major/code/facial_emotion/facialemotionmodel.json"
+json_file_path = "" # add your model path here
 json_file = open(json_file_path, "r")
 
 # json_file = open("facialemotionmodel.json", "r")
 model_json = json_file.read()
 json_file.close()
 model = model_from_json(model_json)
-
 model.load_weights("facialemotionmodel.h5")
 haar_file=cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 face_cascade=cv2.CascadeClassifier(haar_file)
