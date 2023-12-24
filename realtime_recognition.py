@@ -6,7 +6,7 @@ print(os.getcwd())
 from tensorflow.keras.models import model_from_json
 # from keras_preprocessing.image import load_img
 
-json_file_path = "" # add your model path here
+json_file_path = "" #  add your model path here
 json_file = open(json_file_path, "r")
 
 # json_file = open("facialemotionmodel.json", "r")
